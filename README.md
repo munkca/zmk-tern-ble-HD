@@ -6,4 +6,4 @@ This is my personal build for the tern-ble, thanks to
 
 And much thanks to Ryan Schenk for also making the gorgeous Re-gret, which scratches so many itches, but got me considering ever-smaller keyboards.
 
-This has my keymap using Callum-style home-row mods. I'll be making a copy and try out a HandsDown layout. 
+This is the one I will be building a HandsDown keymap for, and is currently a work almost in progress.
