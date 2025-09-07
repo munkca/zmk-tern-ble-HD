@@ -22,13 +22,6 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <225>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
 
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
@@ -85,6 +78,9 @@
 
             ignored-key-positions = <10>;
         };
+
+
+
     };
 
     combos {
