@@ -98,16 +98,16 @@
 
         // Activate system layer on inner thumbs
 
-        combo_sqt {
+        combo_z {
             timeout-ms = <50>;
             key-positions = <0 8>;
-            bindings = <&kp SQT>;
+            bindings = <&kp Z>;
         };
 
         combo_p {
             timeout-ms = <50>;
-            key-positions = <7 17>;
-            bindings = <&kp L>;
+            key-positions = <2 3>;
+            bindings = <&kp Q>;
         };
 
         combo_b {
