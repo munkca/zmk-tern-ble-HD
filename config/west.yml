@@ -8,23 +8,18 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: urob
       url-base: https://github.com/urob
-    - name: ssbb
-      url-base: https://github.com/ssbb
-
       
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-      
     - name: zmk-adaptive-key
       remote: urob
       revision: main # set to same as ZMK version above
     - name: zmk-auto-layer # used in &num_word
       remote: urob
       revision: main # set to same as ZMK version above
-      
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main      
