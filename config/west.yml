@@ -2,17 +2,32 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+    - name: urob
+      url-base: https://github.com/urob
+    - name: ssbb
+      url-base: https://github.com/ssbb
+
+      
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+      
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: main # set to same as ZMK version above
+    - name: zmk-auto-layer # used in &num_word
+      remote: urob
+      revision: main # set to same as ZMK version above
+      
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main      
+      
   self:
     path: config
