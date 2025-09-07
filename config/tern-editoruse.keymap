@@ -22,7 +22,6 @@
 
 / {
     behaviors {
-
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
@@ -79,8 +78,19 @@
             ignored-key-positions = <10>;
         };
 
+        comma_etc: comma_etc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COMMA_ETC";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMICOLON>, <&kp COLON>;
+        };
 
-
+        ques_excl: ques_excl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QUES_EXCL";
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+        };
     };
 
     combos {
@@ -189,10 +199,10 @@
 
         default_layer {
             bindings = <
-         &kp W  &kp M  &kp G                  &kp X    &kp QUESTION  &kp DOT    &kp SQT  &kp J
-  &kp S  &kp C  &kp N  &kp T                  &kp K    &kp COMMA     &kp A      &kp E    &kp I  &kp H
-  &kp F  &kp P  &kp L  &kp D                                         &kp U      &kp O    &kp Y  &kp B
-                       &sticky_tap_layer 3 R  &mo 2    &mo 1         &kp SPACE
+         &kp W  &kp M  &kp G                  &kp X    &ques_excl  &kp DOT    &kp SQT  &kp J
+  &kp S  &kp C  &kp N  &kp T                  &kp K    &comma_etc  &kp A      &kp E    &kp I  &kp H
+  &kp F  &kp P  &kp L  &kp D                                       &kp U      &kp O    &kp Y  &kp B
+                       &sticky_tap_layer 3 R  &mo 2    &mo 1       &kp SPACE
             >;
         };
 
